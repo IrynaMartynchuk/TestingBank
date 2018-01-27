@@ -88,6 +88,22 @@
             return $konto;
         }
         
+        function sjekkLoggInn($personnummer, $passord){
+            $kunde = new kunde();
+            $kunde->personnummer = "111111111111";
+            $kunde->passord = "123456";
+            
+            if($personnummer == $kunde->personnummer && $passord == $kunde->passord){
+                return "OK";
+            } else {
+                return "Feil";
+            }    
+        }
+        
+        function registrerBetaling($kontoNr, $transaksjon){
+            
+        }
+        
         function hentSaldi($personnr){
             $konto = new konto();
             $konto->personnummer=01010122344;

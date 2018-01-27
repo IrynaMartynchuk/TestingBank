@@ -4,7 +4,7 @@ include_once '../DAL/databaseStub.php';
 include_once '../BLL/bankLogikk.php';
 
 //!!!!!Not sure if I have to make a test for regex
-class sjekkLoggInnTest extends PHPUnit_Framework_TestCase{
+class sjekkLoggInnTest extends PHPUnit\Framework\TestCase{
     
     public function testCorrectPPersonalNumber(){
         //Arrange
@@ -50,5 +50,15 @@ class sjekkLoggInnTest extends PHPUnit_Framework_TestCase{
         //Assert
         $this->assertEquals($result, "Feil i passord");
     }
+    
+    public function NoPassword(){
+        //Arrange
+        $personnummer = "111111111111";
+        $password = "";
+        $bank = new Bank(new BankDBStub());
+        //Act
+        $result = $bank->sjekkLoggInn($personnummer, $password);
+        //Assert
+        $this->assertEquals($result, "Feil i passord");
+    }
 }
-
