@@ -2,7 +2,7 @@
 include_once '../Model/domeneModell.php';
 include_once '../DAL/databaseStub.php';
 include_once '../BLL/adminLogikk.php';
-
+//Hei Ira it's maja, just checking if the git is working
 class endreKontoTest extends PHPUnit_Framework_TestCase{
     public function testCorrect(){
         $konto = new konto();
