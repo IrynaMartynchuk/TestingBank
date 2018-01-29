@@ -4,8 +4,8 @@ include_once '../DAL/databaseStub.php';
 include_once '../BLL/bankLogikk.php';
 
 class registrerBetalingTest extends PHPUnit\Framework\TestCase{
-    
-    public function testBetalingRegisteredOK(){
+    /////CONTINUE
+    public function testPaymentRegisteredOK(){
         
         //Arrange
         $kontoNr = "1234567890";
@@ -25,9 +25,10 @@ class registrerBetalingTest extends PHPUnit\Framework\TestCase{
         $transaksjon1->melding="message";
         $transaksjon1->dato="12-05-17";
         $transaksjoner [] = $transaksjon1;
-        
+       
         $konto->transaksjoner = $transaksjoner;
         $transaksjon = $konto->transaksjoner[0];
+        
         //Act
         $result = $bank->registrerBetaling($kontoNr, $transaksjon);
         //Assert
@@ -35,7 +36,7 @@ class registrerBetalingTest extends PHPUnit\Framework\TestCase{
         
     }
     
-    public function testBetalingRegisteredWrong() {
+    public function testPaymentRegisteredWrong() {
         
         //Arrange
         $kontoNr = "127890";

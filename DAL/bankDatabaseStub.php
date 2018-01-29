@@ -128,5 +128,10 @@
                 return false;
             }
         }
+        
+        function endreKundeInfo(){
+            
+            
+        }
 
     }
