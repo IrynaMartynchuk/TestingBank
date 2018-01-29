@@ -22,6 +22,7 @@ class Admin
         return $kunder;
     }
     
+    //Maja
     function endreKundeInfo($kunde)
     {
         $OK= $this->db->endreKundeInfo($kunde);
@@ -40,6 +41,7 @@ class Admin
         return $OK;
     }
     
+    //Maja
     function registrerKonto($konto)
     {
         $OK = $this->db->registerKonto($konto);
@@ -56,6 +58,8 @@ class Admin
         $konti = $this->db->hentAlleKonti();
         return $konti;
     }
+    
+    //Maja
     function slettKonto($kontonummer)
     {
         $OK = $this->db->slettKonto($kontonummer);

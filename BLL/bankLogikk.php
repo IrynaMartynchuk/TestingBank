@@ -50,6 +50,7 @@ class Bank
         return $saldi;
     }
     
+    //Maja
     function registrerBetaling($kontoNr, $transaksjon)
     {
         $ok = $this->db->registrerBetaling($kontoNr, $transaksjon);
@@ -68,6 +69,7 @@ class Bank
         return $ok;
     }
     
+    //Maja
     function endreKundeInfo($kunde)
     {
         $OK= $this->db->endreKundeInfo($kunde);
