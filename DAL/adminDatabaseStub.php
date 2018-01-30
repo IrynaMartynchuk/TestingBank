@@ -19,7 +19,7 @@ class AdminDBStub {
                 return false;
             }
         }
-    }
+    
     
     function endreKundeInfo($kunde){
         
@@ -33,3 +33,4 @@ class AdminDBStub {
             return "Wrong";
           }
     }
+}

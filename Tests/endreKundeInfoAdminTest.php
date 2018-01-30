@@ -5,20 +5,30 @@ include_once '../BLL/adminLogikk.php';
 
 class endreKundeInfoAdminTest extends PHPUnit\Framework\TestCase{
     
+    function testCorrectCustomerDetails(){
+        
         $kunde = new kunde();
-        $kunde->adresse = "Thereses Gate";
         $kunde->etternavn = "Kiszka";
-        $kunde->fornavn = "Maja";
-        $kunde->passord = "blabla";
-        $kunde->personnummer = 11111111111;
-        $kunde->postnr = 0452;
-        $kunde->poststed = "Oslo";
-        $kunde->telefonnr = 23456789;
+        $kunde->adresse = "Thereses Gate";
         
         $admin = new Admin(new AdminDBStub());
         
         $result = $admin->endreKundeInfo($kunde);
-        
         $this->assertEquals($result, "OK");
+       
+    }
+    
+    function testIncorrectCustomerDetails(){
+        
+        $kunde = new kunde();
+        $kunde->etternavn = "Etternavn";
+        $kunde->adresse = "";
+        
+        $admin = new Admin(new AdminDBStub());
+        
+        $result = $admin->endreKundeInfo($kunde);
+        $this->assertEquals($result,"Wrong");
+        
+    }
     
 }
