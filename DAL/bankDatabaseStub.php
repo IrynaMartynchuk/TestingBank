@@ -131,7 +131,11 @@
         
         function endreKundeInfo($kunde){
             
-            if($kunde->etternavn == "Kiszka"){
+            $kunde1 = new kunde();
+            $kunde1->etternavn = "Kiszka";
+            $kunde1->adresse = "Thereses Gate";
+            
+            if($kunde1->etternavn == $kunde->etternavn || $kunde1->adresse == $kunde->adresse){
                 return "OK";
             }else {
                 return "Wrong";

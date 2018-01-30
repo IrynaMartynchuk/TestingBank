@@ -28,7 +28,7 @@ class endreKundeInfoTest extends PHPUnit\Framework\TestCase{
     public function testIncorrectChange(){
         
         $kunde = new kunde();
-        $kunde->adresse = "Thereses Gate";
+        $kunde->adresse = "Thereses ";
         $kunde->etternavn = "Kia";
         $kunde->fornavn = "Maja";
         $kunde->passord = "blabla";
