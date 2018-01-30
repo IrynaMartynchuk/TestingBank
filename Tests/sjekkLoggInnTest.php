@@ -6,7 +6,7 @@ include_once '../BLL/bankLogikk.php';
 //!!!!!Not sure if I have to make a test for regex
 class sjekkLoggInnTest extends PHPUnit\Framework\TestCase{
     
-    public function testCorrectPPersonalNumber(){
+    public function testCorrectPNumberCorrectPass(){
         //Arrange
         $personnummer = "111111111111";
         $password = "123456";
@@ -17,7 +17,7 @@ class sjekkLoggInnTest extends PHPUnit\Framework\TestCase{
         $this->assertEquals($result, "OK"); 
     }
 
-    public function testIncorrectPersonalNumber(){
+    public function testPNumberTooShort(){
         //Arrange
         $personnummer = "1111111";
         $password = "123456";
@@ -27,19 +27,29 @@ class sjekkLoggInnTest extends PHPUnit\Framework\TestCase{
         //Assert
         $this->assertEquals($result, "Feil i personnummer");  
     }
-    
-    public function testCorrectPassword(){
+
+    public function testPNumberTooLong(){
         //Arrange
-        $personnummer = "111111111111";
+        $personnummer = "1111111111111111";
         $password = "123456";
         $bank = new Bank(new BankDBStub());
         //Act
         $result = $bank->sjekkLoggInn($personnummer, $password);
         //Assert
-        $this->assertEquals($result, "OK");
+        $this->assertEquals($result, "Feil");  
     }
-
-
+    
+    public function testLettersInPNr(){
+        //Arrange
+        $personnummer = "1111111111a";
+        $password = "123456";
+        $bank = new Bank(new BankDBStub());
+        //Act
+        $result = $bank->sjekkLoggInn($personnummer, $password);
+        //Assert
+        $this->assertEquals($result, "Feil i personnummer");  
+    }
+    
     public function testWrongPassword(){
         //Arrange
         $personnummer = "111111111111";
