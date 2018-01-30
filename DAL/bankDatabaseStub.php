@@ -101,7 +101,7 @@
         }
         
         function registrerBetaling($kontoNr, $transaksjon){
-            
+           
             if($kontoNr == "1234567890" && $transaksjon->melding == "message"){
                 return "OK";
             }    
