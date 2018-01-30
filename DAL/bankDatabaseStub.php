@@ -129,9 +129,13 @@
             }
         }
         
-        function endreKundeInfo(){
+        function endreKundeInfo($kunde){
             
-            
+            if($kunde->etternavn == "Kiszka"){
+                return "OK";
+            }else {
+                return "Wrong";
+            }
         }
 
     }

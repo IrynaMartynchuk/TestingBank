@@ -10,6 +10,7 @@ class AdminDBStub {
             return false;
         }
         }
+        
         function endreKonto($konto){
             if($konto->kontonummer == 105010123456){
                 return true;
