@@ -20,7 +20,7 @@ class AdminDBStub {
             }
         }
     
-    
+    //Maja
     function endreKundeInfo($kunde){
         
         $kunde1 = new kunde();
@@ -34,6 +34,7 @@ class AdminDBStub {
           }
     }
     
+    //Maja
     function registerKonto($konto) {
         
             $kunde = new kunde();
@@ -45,7 +46,8 @@ class AdminDBStub {
                 return "Wrong!";
             }
     }
-        
+     
+    //Maja
     function slettKonto($kontonummer){
         
         $konto = new konto();
