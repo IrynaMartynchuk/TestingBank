@@ -135,7 +135,7 @@
             $kunde1->etternavn = "Kiszka";
             $kunde1->adresse = "Thereses Gate";
             
-            if($kunde1->etternavn == $kunde->etternavn || $kunde1->adresse == $kunde->adresse){
+            if($kunde->etternavn == $kunde1->etternavn || $kunde->adresse == $kunde1->adresse){
                 return "OK";
             }else {
                 return "Wrong";

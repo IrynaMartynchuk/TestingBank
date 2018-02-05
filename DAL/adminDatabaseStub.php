@@ -33,4 +33,29 @@ class AdminDBStub {
             return "Wrong";
           }
     }
+    
+    function registerKonto($konto) {
+        
+            $kunde = new kunde();
+            $kunde->personnummer = "11111111111";
+            
+            if($kunde->personnummer == $konto->personnummer) {
+                return "OK";
+            } else {
+                return "Wrong!";
+            }
+    }
+        
+    function slettKonto($kontonummer){
+        
+        $konto = new konto();
+        $konto->kontonummer = "1234567890";
+        
+        if($konto->kontonummer == $kontonummer){
+            return "OK";
+        }else {
+            return "Wrong!";
+        }
+    }
+     
 }
