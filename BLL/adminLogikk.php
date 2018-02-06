@@ -53,6 +53,7 @@ class Admin
         $OK = $this->db->endreKonto($konto);
         return $OK;
     }
+    
     function hentAlleKonti()
     {
         $konti = $this->db->hentAlleKonti();

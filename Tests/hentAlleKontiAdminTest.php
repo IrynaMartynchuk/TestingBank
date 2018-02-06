@@ -14,5 +14,15 @@ class hentAlleKontiAdminTest extends PHPUnit\Framework\TestCase {
         //assert
         $this->assertEquals(2,count($resultat));
     }
+    
+   /* public function testhentAlleKontiFeil(){
+        
+        //arrange
+        $admin = new Admin(new AdminDBStub());
+        //act
+        $resultat=$admin->hentAlleKonti();
+        //assert
+        $this->assertEquals('Feil',count($resultat));
+    } */
 }
 

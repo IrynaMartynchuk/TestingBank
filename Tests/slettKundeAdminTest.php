@@ -13,7 +13,7 @@ class slettKundeAdminTest extends PHPUnit_Framework_TestCase {
         //act
         $resultat=$admin->slettKunde($personnummer);
         //assert
-        $this->assertsEqual('OK',$resultat);
+        $this->assertEqual('OK',$resultat);
     } 
     
     public function slettKundeAdminPersonnummerFeil() {
@@ -23,7 +23,7 @@ class slettKundeAdminTest extends PHPUnit_Framework_TestCase {
         //act
         $resultat=$admin->slettKunde($personnummer);
         //assert
-        $this->assertsEqual('Feil',$resultat);
+        $this->assertEqual('Feil',$resultat);
     }
     
 }

@@ -4,8 +4,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/majakiszka/NetBeansProjects/TestingBank/Tests/endreKundeInfoAdminTest.php</file>
-            <file>file:/Users/majakiszka/NetBeansProjects/TestingBank/Tests/endreKundeInfoTest.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/DAL/adminDatabase.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/DAL/bankDatabase.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/BLL/adminLogikk.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/Tests/hentKontiTest.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/Tests/hentAlleKontiAdminTest.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/Tests/slettKontoAdminTest.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/Tests/endreKundeInfoAdminTest.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/DAL/bankDatabaseStub.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/Tests/hentSaldiTest.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/DAL/adminDatabaseStub.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/Tests/endreKontoTest.php</file>
+            <file>file:/Applications/MAMP/htdocs/TestingBank/Tests/slettKundeAdminTest.php</file>
         </group>
     </open-files>
 </project-private>
