@@ -39,6 +39,7 @@ class Bank
         return $OK;
     }
     
+    /*Maria*/
     function hentKonti($personnummer)
     {
         $konti = $this->db->hentKonti($personnummer);
@@ -58,6 +59,7 @@ class Bank
         return $ok;
     }
     
+    /*Maria*/
     function hentBetalinger($personnummer)
     {
         $betalinger = $this->db->hentBetalinger($personnummer);
@@ -77,6 +79,7 @@ class Bank
         return $OK;
     }
     
+    /*Maria*/
     function hentKundeInfo($personnummer)
     {
         $kunde= $this->db->hentKundeInfo($personnummer);
