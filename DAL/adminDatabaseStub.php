@@ -11,6 +11,17 @@ class AdminDBStub {
             return false;
         }
     }
+    
+    function slettKunde($personnummer){
+        $kunde= new kunde();
+        $kunde->personnummer=12345678901;
+        if($personnummer==$kunde->personnummer){
+            return 'OK';
+        }
+        else {
+            return 'Feil';
+        }
+    }
         
         function endreKonto($konto){
             if($konto->kontonummer == 105010123456){
