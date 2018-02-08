@@ -155,7 +155,8 @@
                 return $konti;
                 }
                 else {
-                    return 'Mistake';
+                    $konti[]=" ";
+                    return $konti;
                 }
             }
         
