@@ -120,7 +120,7 @@
                 $transaction1->transaksjonBelop=134.4;
                 $transaction1->fraTilKontonummer="22342344556";
                 $transaction1->melding="Meny Holtet";
-                $transaction1->avventer=0;
+                $transaction1->avventer=1;
                 $konto->transaksjoner[]=$transaction1;
                 
                 $transaction2 = new transaksjon();
@@ -131,9 +131,18 @@
                 $transaction2->avventer=1; 
                 $konto->transaksjoner[]=$transaction2;
                 
+                $transaction3 = new transaksjon();
+                $transaction3->dato='2015-03-26';
+                $transaction3->transaksjonBelop=134.4;
+                $transaction3->fraTilKontonummer="22342344556";
+                $transaction3->melding="Meny Holtet";
+                $transaction3->avventer=0;
+                $konto->transaksjoner[]=$transaction3;
+                
                 $betalinger=array();                
                 foreach($konto->transaksjoner as $betaling){
-                    $betalinger[]=$betaling;
+                     if($betaling->avventer == 1){
+                     $betalinger[]=$betaling;}
                 }
                 return $betalinger;
         }

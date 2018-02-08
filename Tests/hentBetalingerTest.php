@@ -16,6 +16,8 @@ class hentBetalingerTest extends PHPUnit_Framework_TestCase{
         $betalinger = $bank->hentBetalinger($personnummer);
         $this->assertEquals(" ",$betalinger[0]);
     }
+    
+    //Test case when all $betaling->avventer=0 - ? 
 }
 
 
