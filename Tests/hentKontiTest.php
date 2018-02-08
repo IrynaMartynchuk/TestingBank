@@ -35,7 +35,7 @@ class hentKontiTest extends PHPUnit_Framework_TestCase{
         //act
         $konto = $bank->hentKonti($personnummer);
         //assert
-        $this->assertEquals('Mistake',$konto);
+        $this->assertEquals(" ",$konto[0]);
     }
 }
 

@@ -16,4 +16,5 @@ class hentSaldiTest extends PHPUnit_Framework_TestCase{
         $saldo = $bank->hentSaldi($personnr);
         $this->assertEquals("Mistake",$saldo);
     }
+   
 }
