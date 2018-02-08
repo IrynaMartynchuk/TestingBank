@@ -3,7 +3,7 @@ include_once '../Model/domeneModell.php';
 include_once '../DAL/databaseStub.php';
 include_once '../BLL/adminLogikk.php';
 
-class endreKundeInfoAdminTest extends PHPUnit\Framework\TestCase{
+class endreKundeInfoAdminTest extends PHPUnit_Framework_TestCase{
     
     function testCorrectCustomerDetails(){
         

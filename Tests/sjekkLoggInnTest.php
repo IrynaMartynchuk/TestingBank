@@ -4,7 +4,7 @@ include_once '../DAL/databaseStub.php';
 include_once '../BLL/bankLogikk.php';
 
 //!!!!!Not sure if I have to make a test for regex
-class sjekkLoggInnTest extends PHPUnit\Framework\TestCase{
+class sjekkLoggInnTest extends PHPUnit_Framework_TestCase{
     
     public function testCorrectPNumberCorrectPass(){
         //Arrange

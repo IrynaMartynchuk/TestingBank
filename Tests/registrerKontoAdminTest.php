@@ -3,7 +3,7 @@ include_once '../Model/domeneModell.php';
 include_once '../DAL/databaseStub.php';
 include_once '../BLL/adminLogikk.php';
 
-class registrerKontoAdminTest extends PHPUnit\Framework\TestCase{
+class registrerKontoAdminTest extends PHPUnit_Framework_TestCase{
     
     function testRegistrationSuccessful() {
         
