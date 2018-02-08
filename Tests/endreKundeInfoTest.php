@@ -4,7 +4,7 @@ include_once '../DAL/databaseStub.php';
 include_once '../BLL/bankLogikk.php';
 
 
-class endreKundeInfoTest extends PHPUnit\Framework\TestCase{
+class endreKundeInfoTest extends PHPUnit_Framework_TestCase{
     
     public function testCorrectChange(){
         

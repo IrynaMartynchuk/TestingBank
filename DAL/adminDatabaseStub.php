@@ -49,10 +49,10 @@ class AdminDBStub {
     }
         
         function endreKonto($konto){
-            if($konto->kontonummer == 105010123456){
-                return true;
-            } else {
+            if($konto->personnummer==90){
                 return false;
+            } else {
+                return true;
             }
         }
     
