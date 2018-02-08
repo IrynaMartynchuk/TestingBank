@@ -110,6 +110,55 @@
             }
         }
         
+    function hentBetalinger($personnummer) {
+        $konto=new konto();
+        $konto->personnummer=01010122344;
+        if($konto->personnummer==$personnummer) {
+                $konto->transaksjoner=array();
+                $transaction1 = new transaksjon();
+                $transaction1->dato='2015-03-26';
+                $transaction1->transaksjonBelop=134.4;
+                $transaction1->fraTilKontonummer="22342344556";
+                $transaction1->melding="Meny Holtet";
+                $transaction1->avventer=0;
+                $konto->transaksjoner[]=$transaction1;
+                
+                $transaction2 = new transaksjon();
+                $transaction2->dato='2015-03-27';
+                $transaction2->transaksjonBelop=-2056.45;
+                $transaction2->fraTilKontonummer="114342344556";
+                $transaction2->melding="Husleie";
+                $transaction2->avventer=1; 
+                $konto->transaksjoner[]=$transaction2;
+                
+                $betalinger=array();                
+                foreach($konto->transaksjoner as $betaling){
+                    $betalinger[]=$betaling;
+                }
+                return $betalinger;
+        }
+        else {
+            return 'Feil';
+        }
+    }
+
+    function hentKonti($personnummer){
+        $konti=array();
+                $konto1 = new konto();
+                $konto2 = new konto();
+                $konto1->personnummer=01010110523;
+                if ($personnummer == $konto1->personnummer){
+                    $konto1->kontonummer=105010123456;
+                    $konti[]= $konto1;
+                    $konto2->kontonummer=105010123499;
+                    $konti[]= $konto2;
+                return $konti;
+                }
+                else {
+                    return 'Mistake';
+                }
+            }
+        
         function hentSaldi($personnr){
             $konto = new konto();
             $konto->personnummer=01010122344;
@@ -141,5 +190,23 @@
                 return "Wrong";
             }
         }
+        
+       function hentKundeInfo($personnummer){
+        $kunde=new kunde(); 
+        $kunde->personnummer=01010110523;
+        if ($kunde->personnummer == $personnummer){
+        $kunde->fornavn ='Maria';
+        $kunde->etternavn ='Mikhaylova';
+        $kunde->adresse = 'Ookern Torgvei 92';
+        $kunde->postnr =1177;
+        $kunde->telefonnr = 45654654;
+        $kunde->passord ='HeiHei';
+        $kunde->poststed='Oslo';
+        return $kunde;
+        }
+        else{
+            return "Feil";
+        }
+       } 
 
     }
