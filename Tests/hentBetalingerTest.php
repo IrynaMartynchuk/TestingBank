@@ -14,7 +14,7 @@ class hentBetalingerTest extends PHPUnit_Framework_TestCase{
         $personnummer = 20108824000;
         $bank=new Bank(new BankDBStub());
         $betalinger = $bank->hentBetalinger($personnummer);
-        $this->assertEquals('Feil',$betalinger);
+        $this->assertEquals(" ",$betalinger[0]);
     }
 }
 

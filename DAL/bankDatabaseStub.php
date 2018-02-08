@@ -138,7 +138,9 @@
                 return $betalinger;
         }
         else {
-            return 'Feil';
+            $betalinger=array();
+            $betalinger[]=" ";
+            return $betalinger;
         }
     }
 
