@@ -172,14 +172,20 @@
             }
         
         function hentSaldi($personnr){
-            $konto = new konto();
-            $konto->personnummer=01010122344;
-            $konto->type="Sparekonto";
-            $konto->saldo =2300.34;
-            $konto->valuta="NOK";
-            if ($personnr == $konto->personnummer)
-            return $konto->saldo;
-            return "Mistake";
+           $saldo = array();
+        if($personnr == 20108824000){
+            return $saldo;
+        }
+        
+        $konto = new stdClass;
+        $konto->Kontonummer = "105010123456";
+        $konto->Personnummer = $personnr;
+        $konto->Saldo = 520;
+        $konto->Type = "Lønnskonto";
+        $konto->Valuta = "NOK";
+        $saldo[]=$konto;
+        
+        return $saldo;
             }
         
         function utforBetaling($TxID){
