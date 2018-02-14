@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 $OK = true;
-$db = new mysqli("localhost", "root","root","Kunde");
+$db = new mysqli("localhost", "root","root","Bank");
 if($db->connect_error)
 {
    $OK=false;
