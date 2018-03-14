@@ -25,7 +25,7 @@ class slettKontoAdminTest extends PHPUnit_Framework_TestCase{
         $admin = new Admin(new AdminDBStub());
         $result = $admin->slettKonto($konto->kontonummer);
         
-        $this->assertEquals($result, "Wrong!");
+        $this->assertEquals($result, "Feil");
         
         
     }

@@ -127,7 +127,7 @@ class AdminDBStub {
         if($konto->kontonummer == $kontonummer){
             return "OK";
         }else {
-            return "Wrong!";
+            return "Feil";
         }
     }
      
