@@ -10,4 +10,3 @@ $konto->valuta       = $_POST["valuta"];
 
 $OK= $admin->endreKonto($konto);
 echo json_encode("OK");
- 

@@ -88,7 +88,7 @@ class AdminDB
         $resultat = $this->db->query($sql);
         if($this->db->affected_rows==1)
         {
-            return "OK";
+            return "OK111";
         }
         else
         {

@@ -117,7 +117,7 @@
                 $konto->transaksjoner=array();
                 $transaction1 = new transaksjon();
                 $transaction1->dato='2015-03-26';
-                $transaction1->transaksjonBelop=134.4;
+                $transaction1->transaksjonBelop=134.45;
                 $transaction1->fraTilKontonummer="22342344556";
                 $transaction1->melding="Meny Holtet";
                 $transaction1->avventer=1;

@@ -8,21 +8,35 @@ class AdminDBStub {
         $alleKunder = array();
            $kunde1 = new kunde();
            $kunde1->personnummer ="01010122344";
-           $kunde1->navn = "Per Olsen";
-           $kunde1->adresse = "Osloveien 82 0270 Oslo";
+           $kunde1->fornavn = "Per";
+           $kunde1->etternavn = "Olsen";
+           $kunde1->postnr=1234;
+           $kunde1->poststed="Asker";
+           $kunde1->adresse = "Osloveien 82";
            $kunde1->telefonnr="12345678";
+           $kunde1->passord="HeiHeiHei";
            $alleKunder[]=$kunde1;
+           
            $kunde2 = new kunde();
-           $kunde2->personnummer ="01010122344";
-           $kunde2->navn = "Line Jensen";
-           $kunde2->adresse = "Askerveien 100, 1379 Asker";
+           $kunde2->personnummer ="01010122355";
+           $kunde2->fornavn = "Line";
+           $kunde2->etternavn = "Jensen";
+           $kunde2->adresse = "Askerveien 10";
+           $kunde2->postnr=4321;
+           $kunde2->poststed="Oslo";
            $kunde2->telefonnr="92876789";
+           $kunde2->passord="HeiHei2";
            $alleKunder[]=$kunde2;
+           
            $kunde3 = new kunde();
-           $kunde3->personnummer ="02020233455";
-           $kunde3->navn = "Ole Olsen";
-           $kunde3->adresse = "Bærumsveien 23, 1234 Bærum";
+           $kunde3->personnummer ="02020233466";
+           $kunde3->fornavn = "Ole";
+           $kunde3->etternavn = "Olsen";
+           $kunde3->adresse = "Bærumsveien 23";
+           $kunde3->postnr=2023;
+           $kunde3->poststed="Oslo";
            $kunde3->telefonnr="99889988";
+           $kunde3->passord="Hei2";
            $alleKunder[]=$kunde3;
            return $alleKunder;
     }
@@ -88,20 +102,18 @@ class AdminDBStub {
         $konti=array();
         $konto1=new konto();
         $konto1->personnummer=12345678901;
-        $konto1->kontonummer=010101234567;
-        $konto1->type="Sparekonto";
+        $konto1->kontonummer=123123123;
+        $konto1->type="Lonnskonto";
         $konto1->saldo =2300.34;
         $konto1->valuta="NOK";
         $konti[]=$konto1;
-      //  $konto1->$transaksjoner = array();
         
         $konto2=new konto();
-        $konto2->personnummer=010101234567;
-        $konto2->kontonummer=010101234567;
+        $konto2->personnummer=12345678901;
+        $konto2->kontonummer=123123333;
         $konto2->type="Sparekonto";
-        $konto2->saldo =2300.34;
+        $konto2->saldo =230000.00;
         $konto2->valuta="NOK";
-        //  $konto1->$transaksjoner = array();
         $konti[]=$konto2;
         return $konti;
     }
