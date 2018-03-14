@@ -24,7 +24,7 @@ class registrerKontoAdminTest extends PHPUnit_Framework_TestCase{
         $admin = new Admin(new AdminDBStub());
         $result = $admin->registrerKonto($konto);
         
-        $this->assertEquals($result, "Wrong!");
+        $this->assertEquals($result, "Feil");
         
     }
     

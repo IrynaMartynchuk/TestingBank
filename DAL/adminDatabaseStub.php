@@ -80,7 +80,7 @@ class AdminDBStub {
         if($kunde1->etternavn == $kunde->etternavn || $kunde1->adresse == $kunde->adresse){
             return "OK";
           }else {
-            return "Wrong";
+            return "Feil";
           }
     }
     
@@ -93,7 +93,7 @@ class AdminDBStub {
             if($kunde->personnummer == $konto->personnummer) {
                 return "OK";
             } else {
-                return "Wrong!";
+                return "Feil";
             }
     }
     

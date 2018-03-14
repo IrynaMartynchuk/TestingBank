@@ -40,48 +40,41 @@ class Bank
     }
     
     /*Maria*/
-    function hentKonti($personnummer)
-    {
+    function hentKonti($personnummer){
         $konti = $this->db->hentKonti($personnummer);
         return $konti;
     }
     
-    function hentSaldi($personnummer)
-    {
+    function hentSaldi($personnummer){
         $saldi = $this->db->hentSaldi($personnummer);
         return $saldi;
     }
     
     //Maja
-    function registrerBetaling($kontoNr, $transaksjon)
-    {
+    function registrerBetaling($kontoNr, $transaksjon){
         $ok = $this->db->registrerBetaling($kontoNr, $transaksjon);
         return $ok;
     }
     
     /*Maria*/
-    function hentBetalinger($personnummer)
-    {
+    function hentBetalinger($personnummer){
         $betalinger = $this->db->hentBetalinger($personnummer);
         return $betalinger;
     }
     
-    function utforBetaling($TxID)
-    {
+    function utforBetaling($TxID){
         $ok = $this->db->utforBetaling($TxID);
         return $ok;
     }
     
     //Maja
-    function endreKundeInfo($kunde)
-    {
+    function endreKundeInfo($kunde){
         $OK= $this->db->endreKundeInfo($kunde);
         return $OK;
     }
     
     /*Maria*/
-    function hentKundeInfo($personnummer)
-    {
+    function hentKundeInfo($personnummer){
         $kunde= $this->db->hentKundeInfo($personnummer);
         return $kunde;
     }

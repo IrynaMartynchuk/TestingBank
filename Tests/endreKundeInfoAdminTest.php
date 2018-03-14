@@ -27,7 +27,7 @@ class endreKundeInfoAdminTest extends PHPUnit_Framework_TestCase{
         $admin = new Admin(new AdminDBStub());
         
         $result = $admin->endreKundeInfo($kunde);
-        $this->assertEquals($result,"Wrong");
+        $this->assertEquals($result,"Feil");
         
     }
     
