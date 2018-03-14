@@ -3,6 +3,7 @@
     <coverage xmlns="http://www.netbeans.org/ns/code-coverage/1" enabled="true"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group>
             <file>file:/Applications/MAMP/htdocs/TestingBank/DAL/adminDatabase.php</file>
             <file>file:/Applications/MAMP/htdocs/TestingBank/DAL/bankDatabase.php</file>
@@ -15,5 +16,8 @@
             <file>file:/Applications/MAMP/htdocs/TestingBank/API/loggInnAdmin.php</file>
             <file>file:/Applications/MAMP/htdocs/TestingBank/API/endreKundeInfo.php</file>
         </group>
+=======
+        <group/>
+>>>>>>> origin/master
     </open-files>
 </project-private>

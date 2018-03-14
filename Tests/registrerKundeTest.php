@@ -17,7 +17,7 @@ class registrerKundeTest extends PHPUnit_Framework_TestCase{
         $kunde->passord = "123456";
         $admin = new Admin(new AdminDBStub);
         $result = $admin->registrerKunde($kunde);
-        $this->assertEquals(true, $result);
+        $this->assertEquals("OK", $result);
     }
     
     public function testWrongInput(){
@@ -32,13 +32,13 @@ class registrerKundeTest extends PHPUnit_Framework_TestCase{
         $kunde->passord = "123456";
         $admin = new Admin(new AdminDBStub);
         $result = $admin->registrerKunde($kunde);
-        $this->assertEquals(false, $result);
+        $this->assertEquals("Feil", $result);
     }
     public function testEmpty(){
         $kunde = new kunde();
         $admin = new Admin(new AdminDBStub);
         $result = $admin->registrerKunde($kunde);
-        $this->assertEquals(false, $result);
+        $this->assertEquals("Feil", $result);
     }
 }
 

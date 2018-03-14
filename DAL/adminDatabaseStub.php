@@ -43,10 +43,10 @@ class AdminDBStub {
     
     function registrerKunde($kunde){
         if($kunde->personnummer == "20108824000"){
-            return true;
+            return "OK";
         } 
         else {
-            return false;
+            return "Feil";
         }
     }
     
@@ -64,9 +64,9 @@ class AdminDBStub {
         
         function endreKonto($konto){
             if($konto->personnummer==90){
-                return false;
+                return "Feil";
             } else {
-                return true;
+                return "OK";
             }
         }
     
