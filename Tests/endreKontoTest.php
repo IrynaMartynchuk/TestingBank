@@ -17,7 +17,7 @@ class endreKontoTest extends PHPUnit_Framework_TestCase{
         
         $result = $admin->endreKonto($konto);
         
-        $this->assertEquals(true, $result);
+        $this->assertEquals("OK", $result);
     }
     public function testWrong(){
         $konto = new konto();
@@ -31,6 +31,6 @@ class endreKontoTest extends PHPUnit_Framework_TestCase{
         
         $result = $admin->endreKonto($konto);
         
-        $this->assertEquals(false, $result);
+        $this->assertEquals("Feil", $result);
     }
 }
