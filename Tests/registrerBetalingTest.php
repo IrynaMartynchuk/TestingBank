@@ -60,9 +60,9 @@ class registrerBetalingTest extends PHPUnit_Framework_TestCase{
         
         $konto->transaksjoner = $transaksjoner;
         $transaksjon = $konto->transaksjoner[0];
-        
+        //act
         $result = $bank->registrerBetaling($kontoNr, $transaksjon);
-        
+        //assert
         $this->assertEquals("Wrong!", $result);
         
     }
@@ -134,6 +134,68 @@ class registrerBetalingTest extends PHPUnit_Framework_TestCase{
         //Assert
         $this->assertEquals("Wrong!", $result);
         $this->assertEquals("Wrong!", $secondResult);
+        
+    }
+    
+    public function testNegativeBelop(){
+        
+        //Arrange
+        $kontoNr = "1234567890";   //correct account nr
+        $bank = new Bank(new BankDBStub());
+        $konto = new konto();
+        $konto->personnummer = "00000000000";
+        $konto->kontonummer = $kontoNr;
+        $konto->saldo = 999.99 ;
+        $konto->type = "Spare";
+        $konto->valuta = "NOK";
+        $transaksjoner = array();
+        
+        $transaksjon1 = new transaksjon();
+        $transaksjon1->avventer = 1;
+        $transaksjon1->fraTilKontonummer = "0099887766";
+        $transaksjon1->belop = -500;
+        $transaksjon1->melding="message"; 
+        $transaksjon1->dato="12-05-17";
+        $transaksjoner [] = $transaksjon1;
+       
+        $konto->transaksjoner = $transaksjoner;
+        $transaksjon = $konto->transaksjoner[0];
+        
+        //Act
+        $result = $bank->registrerBetaling($kontoNr, $transaksjon);
+        //Assert
+        $this->assertEquals("Wrong!", $result);
+        
+    }
+    
+    public function testZeroBelop(){
+        
+        //Arrange
+        $kontoNr = "1234567890";   
+        $bank = new Bank(new BankDBStub());
+        $konto = new konto();
+        $konto->personnummer = "00000000000";
+        $konto->kontonummer = $kontoNr;
+        $konto->saldo = 999.99 ;
+        $konto->type = "Spare";
+        $konto->valuta = "NOK";
+        $transaksjoner = array();
+        
+        $transaksjon1 = new transaksjon();
+        $transaksjon1->avventer = 1;
+        $transaksjon1->fraTilKontonummer = "0099887766";
+        $transaksjon1->belop = 0;
+        $transaksjon1->melding="message"; 
+        $transaksjon1->dato="12-05-17";
+        $transaksjoner [] = $transaksjon1;
+       
+        $konto->transaksjoner = $transaksjoner;
+        $transaksjon = $konto->transaksjoner[0];
+        
+        //Act
+        $result = $bank->registrerBetaling($kontoNr, $transaksjon);
+        //Assert
+        $this->assertEquals("Wrong!", $result);
         
     }
     

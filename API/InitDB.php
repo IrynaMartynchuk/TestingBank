@@ -22,4 +22,3 @@ else
 {
     echo json_encode("Feil");
 } 
-
