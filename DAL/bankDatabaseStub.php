@@ -106,7 +106,7 @@
                 return "OK";
             }    
             else {
-                return "Wrong!";
+                return "Feil";
             }
         }
         
@@ -205,7 +205,7 @@
             if($kunde->etternavn == $kunde1->etternavn || $kunde->adresse == $kunde1->adresse){
                 return "OK";
             }else {
-                return "Wrong";
+                return "Feil";
             }
         }
         

@@ -41,6 +41,6 @@ class endreKundeInfoTest extends PHPUnit_Framework_TestCase{
         
         $result = $bank->endreKundeInfo($kunde);
         
-        $this->assertEquals($result, "Wrong");
+        $this->assertEquals($result, "Feil");
     }
 }

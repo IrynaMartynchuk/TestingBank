@@ -63,7 +63,7 @@ class registrerBetalingTest extends PHPUnit_Framework_TestCase{
         //act
         $result = $bank->registrerBetaling($kontoNr, $transaksjon);
         //assert
-        $this->assertEquals("Wrong!", $result);
+        $this->assertEquals("Feil", $result);
         
     }
     
@@ -132,8 +132,8 @@ class registrerBetalingTest extends PHPUnit_Framework_TestCase{
         $result = $bank->registrerBetaling($kontoNr, $transaksjon);
         $secondResult = $bank->registrerBetaling($kontoNr, $secondTransaksjon);
         //Assert
-        $this->assertEquals("Wrong!", $result);
-        $this->assertEquals("Wrong!", $secondResult);
+        $this->assertEquals("Feil", $result);
+        $this->assertEquals("Feil", $secondResult);
         
     }
     
@@ -164,7 +164,7 @@ class registrerBetalingTest extends PHPUnit_Framework_TestCase{
         //Act
         $result = $bank->registrerBetaling($kontoNr, $transaksjon);
         //Assert
-        $this->assertEquals("Wrong!", $result);
+        $this->assertEquals("Feil", $result);
         
     }
     
@@ -195,7 +195,7 @@ class registrerBetalingTest extends PHPUnit_Framework_TestCase{
         //Act
         $result = $bank->registrerBetaling($kontoNr, $transaksjon);
         //Assert
-        $this->assertEquals("Wrong!", $result);
+        $this->assertEquals("Feil", $result);
         
     }
     
